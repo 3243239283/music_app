@@ -14,16 +14,15 @@ export default new Router({
       path: '/',
       name: 'Hello',
       component: Hello
-    },
-    {
+    },{
   		path: '/home',
   		name: 'home',
   		component: home
-	},{
+  	},{
   		path: '/about',
   		name: 'about',
   		component: about
-	}
+  	}
   ]
 })
 
