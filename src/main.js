@@ -20,6 +20,9 @@ import App from './App'
 import router from './router'
 import store from './store'
 
+//全局css/js
+import "./assets/css/reset.css"
+import "./assets/css/main.css"
 
 /* eslint-disable no-new */
 new Vue({

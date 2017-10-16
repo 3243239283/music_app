@@ -1,7 +1,7 @@
 <template>
   <div class="header">
-    <router-link to="./home"><li>首页</li></router-link>
-    <router-link to="./about"><li>关于我们</li></router-link>
+    <router-link to="./home">首页</router-link>
+    <router-link to="./about">关于我们</router-link>
   </div>
 </template>
 
@@ -30,6 +30,14 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
-	li{display:inline-block;}
+<style lang="less" scoped>
+	.header{
+		font-size:1.8rem;
+		display: -webkit-flex; /* Safari */
+  		display: flex;
+		a{
+			flex:1;
+			line-height:3rem;
+		}
+	}
 </style>
