@@ -5,11 +5,14 @@ Vue.use(Vuex)
 import router from '../router'
 
 const state = {			//状态对象
-	demo:{
+	login:{
 		isActive:1
 	}
 }
-const mutations = {		//触发状态的方法，同步,第一个参数默认state，第二个参数自定义
+const mutations = {
+	changeLogin({login},prop){
+		login[prop.key] = prop.val;
+	}
 }
 const getters = {		//计算state
 }

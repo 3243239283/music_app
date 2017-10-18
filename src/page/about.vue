@@ -8,16 +8,37 @@
       <el-checkbox label="禁用" disabled></el-checkbox>
       <el-checkbox label="选中且禁用" disabled></el-checkbox>
     </el-checkbox-group>
+    <a href="javascript:" @click="ajaxData()">跨域请求数据</a>
   </div>
 </template>
 
 <script>
+import {mapState,mapMutations,mapGetters,mapActions} from 'vuex'
 export default {
   name: 'about',
   data () {
     return {
       msg: 'about',
-      checkList: ['选中且禁用','复选框 A']
+      checkList: ['选中且禁用','复选框 A'],
+      myData:{}
+    }
+  },
+  created(){
+    /*this.ajaxData()*/
+  },
+  methods:{
+    ...mapMutations([
+      'login'
+    ]),
+    ...mapActions([
+      'changeLogin'
+    ]),
+    ajaxData(){
+      this.$http.get('../../static/txt.json').then(response => {
+          console.log(response.data);//需要这样获取到数组
+      }, response => {
+          console.log("error");
+      });
     }
   }
 }
