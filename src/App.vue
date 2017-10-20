@@ -1,22 +1,25 @@
 <template>
   <div id="app">
-    hello world
+    <m-header></m-header>
+    <Tab></Tab>
+    <router-view></router-view>
   </div>
 </template>
 
 <script>
+//引入头部组建
+import MHeader from './components/m-header/m-header'
+import Tab from './components/tab/tab'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+    MHeader,
+    Tab
+  }
 }
 </script>
 
 <style lang="stylus" scoped>
-  @import "common/stylus/mixin.styl";
-#app
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  @import "./common/stylus/mixin.styl"
 </style>
